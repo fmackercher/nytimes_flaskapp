@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        NYTimes App
+    </title>
+</head>
+
+<body>
+    <h1>Hello, {{ name }}!</h1>
+    <p>Today's technology headlines are...</p>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Thumbnail</th>
+        </tr>
+        <tr>
+            {% for key, value in data %}
+            <td><a href="{{ value }}">{{ key }}</a></td>
+            {% endfor %}
+            {% for image in images %}
+            <td>{{ image }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+
+</html>
